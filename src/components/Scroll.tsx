@@ -1,9 +1,14 @@
 import * as React from 'react';
 
-const Scroll = (props) => {
+// could also use this apprach, just showing a dif way to do it
+// interface IScrollProps {
+//   children?: JSX.Element;
+// };
+
+const Scroll: React.SFC<{}> = ({ children }) => {
   return (
     <div style={{ overflow: 'scroll', border: '5px solid black', height: '800px'}}>
-      {props.children}
+      {children as JSX.Element}
     </div>
   );
 };
